@@ -1,0 +1,48 @@
+﻿/*overide of bootstrap*/
+.bg-primary{
+  background-color: #BF1212 !important;
+}
+
+.text-primary{
+  color: white !important;
+  font-weight: bold;
+}
+
+
+
+.bg-grey{
+  background-color: #2F2E2E !important;
+}
+
+.text-dark{
+  color: black;
+  font-weight: bold;
+}
+
+.navbar-nav a:hover { 
+  color: #BF1212 !important;
+ }
+
+ .navbar-nav a:focus { 
+  color: #BF1212 !important;
+ }
+
+ .navbar .navbar-brand a:hover{
+   color: #BF1212 !important;
+ }
+
+ .navbar a:hover{
+  color: #BF1212 !important;
+
+ }
+
+ 
+
+/*custom classes*/
+.bars{
+  background-color: #BF1212;
+}
+
+.text-dark-red{
+  color: red;
+}
