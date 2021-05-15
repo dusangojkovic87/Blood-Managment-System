@@ -1,4 +1,10 @@
-﻿/*overide of bootstrap*/
+﻿html,body{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/*overide of bootstrap*/
 .bg-primary{
   background-color: #BF1212 !important;
 }
@@ -27,18 +33,36 @@
   color: #BF1212 !important;
  }
 
- .navbar .navbar-brand a:hover{
-   color: #BF1212 !important;
- }
-
- .navbar a:hover{
-  color: #BF1212 !important;
-
+ .navbar > a:hover{
+   color: white !important;
  }
 
  
+ 
 
-/*custom classes*/
+ /*FONTS*/
+ @font-face {
+   font-family:"Monserrat";
+   src: url("../fonts/Montserrat-Regular.ttf");
+ }
+
+ @font-face {
+   font-family:"Permanent Marker";
+   src: url("../fonts/PermanentMarker-Regular.ttf");
+ }
+
+ .font-monserrat{
+   font-family: "Monserrat";
+ }
+
+ .font-permanent-marker{
+  font-family: "Permanent Marker";
+
+ }
+
+
+
+/*CUSTOM CLASSES*/
 .bars{
   background-color: #BF1212;
 }
@@ -46,3 +70,30 @@
 .text-dark-red{
   color: red;
 }
+
+.z-index-100{
+  position: relative;
+  z-index: 100;
+}
+
+.font-size-4rem{
+  font-size: 4rem;
+}
+
+.bg-black{
+  background-color: #010101;
+}
+
+.height-500px{
+  height: 500px;
+}
+
+.height-400px{
+  height: 400px;
+}
+
+.height-300px{
+  height: 300px;
+}
+
+
