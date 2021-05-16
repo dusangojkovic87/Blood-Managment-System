@@ -15629,8 +15629,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Dule\\Desktop\\Donate Blood\\DonateBlood\\Views\\Shared\\_Footer.cshtml",
+      "TargetPath": "Views\\Shared\\_Footer.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Dule\\Desktop\\Donate Blood\\DonateBlood\\Views\\Home\\Privacy.cshtml",
       "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Dule\\Desktop\\Donate Blood\\DonateBlood\\Views\\SearchDonors\\Index.cshtml",
+      "TargetPath": "Views\\SearchDonors\\Index.cshtml",
       "FileKind": "mvc"
     },
     {

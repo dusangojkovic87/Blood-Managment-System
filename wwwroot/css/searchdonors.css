@@ -1,0 +1,9 @@
+.search__icon{
+    position: relative;
+    background: url("../icons/searchdonors/search.svg");
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    top:9px;
+    left:1px;
+}
