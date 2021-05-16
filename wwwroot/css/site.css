@@ -67,22 +67,18 @@
   background-color: #BF1212;
 }
 
-.text-dark-red{
-  color: red;
-}
-
 .z-index-100{
   position: relative;
   z-index: 100;
 }
 
-.font-size-4rem{
-  font-size: 4rem;
-}
+
 
 .bg-black{
   background-color: #010101;
 }
+
+/*HEIGHTS*/
 
 .height-500px{
   height: 500px;
@@ -92,8 +88,98 @@
   height: 400px;
 }
 
-.height-300px{
-  height: 300px;
+.height-50px{
+  height: 50px;
 }
 
+/*TEXT COLORS*/
+.text-dark-red{
+  color: red;
+}
 
+.text-white{
+  color: white;
+}
+
+.text-grey{
+  color: #434040;
+}
+
+/*FONT SIZE*/
+.font-size-2rem{
+  font-size: 2rem;
+}
+
+.font-size-4rem{
+  font-size: 4rem;
+}
+
+.font-size-1-2rem{
+  font-size:1.2rem;
+}
+
+/*CUSTOM ICONS*/
+.phone__icon{
+  background: url("../icons/footer/phone.svg");
+  height:46px;
+  width:46px;
+  display:block;
+  background-repeat: no-repeat;
+}
+
+.location__icon{
+  background: url("../icons/footer/location.svg");
+  height:46px;
+  width:46px;
+  display:block;
+  background-repeat: no-repeat;
+}
+
+.facebook__icon{
+  background: url("../icons/footer/facebook.svg");
+  height:46px;
+  width:46px;
+  display:block;
+  background-repeat: no-repeat;
+}
+
+.instagram__icon{
+  background: url("../icons/footer/instagram.svg");
+  height:46px;
+  width:46px;
+  display:block;
+  background-repeat: no-repeat;
+}
+
+/*FOOTER*/
+
+footer ul li{
+  list-style: none;
+  color: white;
+  font-family: "Monserrat";
+  font-weight: bold;
+  margin: 1rem;
+}
+
+.footer__input{
+  position: relative;
+  width:12rem;
+  margin: 1rem;
+}
+
+footer button{
+  margin-top: 1rem;
+  background-color: #464645;
+  color: white;
+  font-family: "Monserrat";
+  font-weight: bold;
+  width:9rem;
+  cursor: pointer;
+  border: 2px solid white;
+}
+
+::placeholder{
+  font-family: "Monserrat";
+  padding-left: 1rem;
+  font-weight: bold;
+}
