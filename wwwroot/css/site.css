@@ -92,6 +92,17 @@
   height: 50px;
 }
 
+.height-300px{
+  height: 300px;
+}
+
+.height-250px{
+  height:250px;
+}
+
+
+
+
 /*TEXT COLORS*/
 .text-dark-red{
   color: red;
@@ -104,6 +115,8 @@
 .text-grey{
   color: #434040;
 }
+
+
 
 /*FONT SIZE*/
 .font-size-1rem{
@@ -170,6 +183,10 @@
 
 .border-red{
   border:2px solid #D40000; 
+}
+
+.border-primary{
+  border:2px solid #BF1212 !important;
 }
 
 /*  OUTLINE*/
