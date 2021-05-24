@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="~/css/home.css" />
-     <link rel="stylesheet" href="~/css/searchdonors.css" />
+    <link rel="stylesheet" href="~/css/searchdonors.css" />
+    <link rel="stylesheet" href="~/css/login.css" />
+    <link rel="stylesheet" href="~/css/register.css" />
 </head>
 
 <body>
@@ -23,16 +25,19 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link text-primary font-monserrat" href="/Home">Home <span
-                                class="sr-only">(current)</span></a>
+
+                        <a class="nav-link text-primary font-monserrat d-flex align-items-center" href="/Home"> <span
+                                class="home__icon mr-2"></span>Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-primary font-monserrat" href="/SearchDonors">search donors</a>
+                        <a class="nav-link text-primary font-monserrat d-flex align-items-center"
+                            href="/SearchDonors"><span class="glass__icon mr-2"></span>search donors</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-primary font-monserrat" href="#"
-                            id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                        <a class="nav-link dropdown-toggle text-primary font-monserrat d-flex align-items-center"
+                            href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false">
+                            <span class="drop__icon mr-2"></span>
                             blood type requests
                         </a>
                         <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdownMenuLink">
@@ -40,8 +45,16 @@
                             <a class="dropdown-item text-primary font-monserrat" href="#">view blood requests</a>
                         </div>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-primary font-monserrat" href="/SignIn">sign in</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-primary font-monserrat d-flex align-items-center"
+                            href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <span class="login__icon mr-2"></span>
+                            sign in</a>
+                        <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item text-primary font-monserrat" href="/register">register</a>
+                            <a class="dropdown-item text-primary font-monserrat" href="/login">login</a>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -50,7 +63,7 @@
     <main role="main">
         @RenderBody()
     </main>
-   
+
 
 
 

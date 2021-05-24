@@ -2,11 +2,11 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DonateBlood.Controllers
 {
-    public class SignInController:Controller
+    public class RegisterController:Controller
     {
-
         public IActionResult Index(){
             return View();
-        }      
+        }
+        
     }
 }

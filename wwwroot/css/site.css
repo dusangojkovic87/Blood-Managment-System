@@ -14,8 +14,6 @@
   font-weight: bold;
 }
 
-
-
 .bg-grey{
   background-color: #2F2E2E !important;
 }
@@ -72,10 +70,12 @@
   z-index: 100;
 }
 
-
-
 .bg-black{
   background-color: #010101;
+}
+
+.active-login-link{
+  background-color: #D40000 !important;
 }
 
 /*HEIGHTS*/
@@ -100,7 +100,9 @@
   height:250px;
 }
 
-
+.height-2rem{
+  height: 2rem;
+}
 
 
 /*TEXT COLORS*/
@@ -171,6 +173,45 @@
   width:46px;
   display:block;
   background-repeat: no-repeat;
+}
+
+.home__icon{
+  background: url("../icons/navbar/home.svg");
+  height:20px;
+  width:20px;
+  display:inline-block;
+  background-repeat: no-repeat;
+  margin-bottom: 4px;
+
+}
+
+.glass__icon{
+  background: url("../icons/navbar/glass.svg");
+  height:20px;
+  width:20px;
+  display:inline-block;
+  background-repeat: no-repeat;
+  margin-bottom: 4px;
+
+}
+
+.drop__icon{
+  background: url("../icons/navbar/drop.svg");
+  height:20px;
+  width:20px;
+  display:inline-block;
+  background-repeat: no-repeat;
+  margin-bottom: 4px;
+}
+
+.login__icon{
+  background: url("../icons/navbar/login.svg");
+  height:20px;
+  width:20px;
+  display:inline-block;
+  background-repeat: no-repeat;
+  margin-bottom: 4px;
+
 }
 
 /*BORDER*/
