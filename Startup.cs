@@ -2,9 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DonateBlood.Models;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -25,6 +29,17 @@ namespace DonateBlood
         {
             services.AddControllersWithViews();
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
+            services.AddDbContext<AplicationDbContext>(opt =>{
+                opt.UseSqlServer(Configuration.GetConnectionString("Default"));
+            });
+
+            services.AddIdentity<AplicationUser,IdentityRole>(opt =>{
+                opt.Password.RequireUppercase = false;
+                opt.User.RequireUniqueEmail = true;
+            }).AddEntityFrameworkStores<AplicationDbContext>();
+
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+            .AddCookie();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -46,6 +61,7 @@ namespace DonateBlood
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseAuthentication();
 
             app.UseEndpoints(endpoints =>
             {

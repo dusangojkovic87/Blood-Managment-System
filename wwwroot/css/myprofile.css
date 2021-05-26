@@ -1,0 +1,33 @@
+.profile__list__item{
+    list-style: none;
+}
+
+.profile__link{
+    font-family: "Monserrat";
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    
+}
+
+.profile__link:hover{
+    text-decoration: none;
+    color: #BF1212;
+}
+
+#profileDropdownBtn{
+    position: relative;
+    color: white;
+    width: 100%;
+    font-family: "Monserrat";
+    font-weight: bold;
+}
+
+#profileDropdownBtn{
+    background-color: #BF1212 !important;
+    background-image: none;
+}
+
+
+

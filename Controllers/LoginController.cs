@@ -4,9 +4,12 @@ namespace DonateBlood.Controllers
 {
     public class LoginController:Controller
     {
+        [HttpGet]
         public IActionResult Index(){
-            return View();
+        return View();
         }
+
+        
         
     }
 }

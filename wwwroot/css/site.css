@@ -100,6 +100,10 @@
   height:250px;
 }
 
+.height-100px{
+  height: 100px;
+}
+
 .height-2rem{
   height: 2rem;
 }
@@ -212,6 +216,46 @@
   background-repeat: no-repeat;
   margin-bottom: 4px;
 
+}
+
+.user__icon{
+  background: url("../icons/navbar/user.svg");
+  height:20px;
+  width:20px;
+  display:inline-block;
+  background-repeat: no-repeat;
+  margin-bottom: 4px;
+
+}
+
+.edit__icon{
+  background: url("../icons/profile/edit.svg");
+  height:20px;
+  width:20px;
+  display:inline-block;
+  background-repeat: no-repeat;
+  margin-bottom: 4px;
+  margin-right: 6px;
+}
+
+.post__icon{
+  background: url("../icons/profile/post.svg");
+  height:20px;
+  width:20px;
+  display:inline-block;
+  background-repeat: no-repeat;
+  margin-bottom: 4px;
+  margin-right: 6px;
+}
+
+.delete__icon{
+  background: url("../icons/profile/delete.svg");
+  height:20px;
+  width:20px;
+  display:inline-block;
+  background-repeat: no-repeat;
+  margin-bottom: 4px;
+  margin-right: 6px;
 }
 
 /*BORDER*/

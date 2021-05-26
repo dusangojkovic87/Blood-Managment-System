@@ -15649,6 +15649,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Dule\\Desktop\\Donate Blood\\DonateBlood\\Views\\MyProfile\\Index.cshtml",
+      "TargetPath": "Views\\MyProfile\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Dule\\Desktop\\Donate Blood\\DonateBlood\\Views\\Register\\Index.cshtml",
       "TargetPath": "Views\\Register\\Index.cshtml",
       "FileKind": "mvc"

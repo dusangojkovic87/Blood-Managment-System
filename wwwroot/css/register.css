@@ -28,12 +28,36 @@
     border: none;
     padding:0.5rem;
     display: block;
-    margin-top:8rem;
-    
+    margin-top:8rem; 
 }
+
+.bottom-register-col-margin{
+    margin-bottom:4.2rem;
+}
+
+.blood-type-wrraper{
+    position: relative;
+    width: 14rem;
+}
+
+.blood__type__label{
+    font-size: 1rem;
+    font-family: "Monserrat";
+    font-weight: bold;
+}
+
 
 @media only screen and (min-width:768px){
     .register__btn{
-        margin-top:1rem;
+      top:-4rem;
+      
     }
+}
+
+@media only screen and (max-width:574px){
+    .register__btn{
+       top:7rem;
+      
+    }
+
 }
