@@ -30,7 +30,9 @@
 
 .donor-name-wrraper{
     position: relative;
-    width:250px;
+    left:0;
+    top:0;
+    width:17rem;
     height:2rem;
 }
 
@@ -38,6 +40,10 @@
     .donor-container{
         height:400px;
         width: 254px;
+    }
+
+    .donor-name-wrraper{
+        width: 15.7rem;
     }
 }
 

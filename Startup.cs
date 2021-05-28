@@ -1,13 +1,9 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using AutoMapper;
 using DonateBlood.Models;
+using DonateBlood.Services.Repositories;
+using DonateBlood.Services.ServiceInterface;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -27,15 +23,18 @@ namespace DonateBlood
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
-        {
+        {   
+            services.AddScoped<IUnitOfWork,UnitOfWork>();
             services.AddAutoMapper(typeof(Startup));
             services.AddControllersWithViews();
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
-            services.AddDbContext<AplicationDbContext>(opt =>{
+            services.AddDbContext<AplicationDbContext>(opt =>
+            {
                 opt.UseSqlServer(Configuration.GetConnectionString("Default"));
             });
 
-            services.AddIdentity<AplicationUser,IdentityRole>(opt =>{
+            services.AddIdentity<AplicationUser, IdentityRole>(opt =>
+            {
                 opt.Password.RequireUppercase = false;
                 opt.User.RequireUniqueEmail = true;
                 opt.Password.RequiredLength = 4;
@@ -44,11 +43,12 @@ namespace DonateBlood
             }).AddEntityFrameworkStores<AplicationDbContext>();
 
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-            .AddCookie(opt =>{
+            .AddCookie(opt =>
+            {
                 opt.LoginPath = "/Home/Login";
             });
 
-           
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -64,7 +64,7 @@ namespace DonateBlood
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-          /*   app.UseHttpsRedirection(); */
+            /*   app.UseHttpsRedirection(); */
             app.UseStaticFiles();
 
             app.UseRouting();

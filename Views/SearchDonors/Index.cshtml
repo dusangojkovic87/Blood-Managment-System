@@ -1,3 +1,4 @@
+@model IEnumerable<AplicationUser> 
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewData["Title"] = "Search Donors";
@@ -30,8 +31,12 @@
 </div>
 <div class="container-fluid p-4">
     <div class="row no-gutter">
-        <div class="col-12 d-flex justify-content-center">
-            <partial name="_Donor"></partial>
+        <div class="col-12 d-flex flex-column align-items-center justify-content-center">
+            @foreach (var donor in Model)
+            {
+               <partial name="_Donor" model="donor"></partial>            
+            }
+            
         </div>
     </div>
 </div>
