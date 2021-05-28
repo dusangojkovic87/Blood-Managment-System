@@ -36,6 +36,16 @@
     height:2rem;
 }
 
+.region__input{
+    position: relative;
+    width: 12rem;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #BF1212;
+    outline: none;
+}
+
 @media only screen and (max-width:768px){
     .donor-container{
         height:400px;
@@ -46,4 +56,17 @@
         width: 15.7rem;
     }
 }
+
+@media only screen and (max-width:410px){
+    .region__input{
+        width:9rem;
+    }
+}
+
+@media only screen and (max-width:335px){
+    .region__input{
+        width:7rem;
+    }
+}
+
 

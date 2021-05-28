@@ -1,7 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using DonateBlood.Models;
 using DonateBlood.Services.ServiceInterface;
 using Microsoft.AspNetCore.Mvc;
 
@@ -17,8 +14,9 @@ namespace DonateBlood.Controllers
         }
         public IActionResult Index()
         {
-            var donors = _unitOfWork.Donor.GetAllDonors();
-            return View(donors);
+            var donorsVm = new DonorsViewModel();
+            donorsVm.Donors = _unitOfWork.Donor.GetAllDonors();
+            return View(donorsVm);
         }
     }
 }
