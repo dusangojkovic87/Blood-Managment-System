@@ -108,6 +108,11 @@
   height: 2rem;
 }
 
+/*CUSTOM MARGINS*/
+.mt-20{
+  margin-top:55px;
+}
+
 
 /*TEXT COLORS*/
 .text-dark-red{
@@ -256,6 +261,17 @@
   background-repeat: no-repeat;
   margin-bottom: 4px;
   margin-right: 6px;
+}
+
+.logout__icon{
+  background: url("../icons/navbar/logout.svg");
+  height:20px;
+  width:20px;
+  display:inline-block;
+  background-repeat: no-repeat;
+  margin-bottom: 4px;
+  margin-right: 6px;
+
 }
 
 /*BORDER*/

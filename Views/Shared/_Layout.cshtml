@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="~/css/searchdonors.css" />
     <link rel="stylesheet" href="~/css/login.css" />
     <link rel="stylesheet" href="~/css/register.css" />
-     <link rel="stylesheet" href="~/css/myprofile.css" />
+    <link rel="stylesheet" href="~/css/myprofile.css" />
 </head>
 
 <body>
@@ -45,22 +45,33 @@
                             <a class="dropdown-item text-primary font-monserrat" href="#">request blood</a>
                             <a class="dropdown-item text-primary font-monserrat" href="#">view blood requests</a>
                         </div>
-                    </li>
-                     <li class="nav-item">
+                    </li>    
+                    <li class="nav-item">
                         <a class="nav-link text-primary font-monserrat d-flex align-items-center"
                             href="/MyProfile"><span class="user__icon mr-2"></span>My Profile</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-primary font-monserrat d-flex align-items-center"
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link text-primary font-monserrat d-flex align-items-center" asp-controller="Login" asp-action="Logout"><span
+                                class="logout__icon mr-2"></span>Logout</a>
+                        </li>
+
+                    }
+                    else
+                    {
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-primary font-monserrat d-flex align-items-center"
                             href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false">
-                            <span class="login__icon mr-2"></span>
-                            sign in</a>
-                        <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item text-primary font-monserrat" href="/register">register</a>
-                            <a class="dropdown-item text-primary font-monserrat" href="/login">login</a>
-                        </div>
-                    </li>
+                                <span class="login__icon mr-2"></span>
+                                sign in</a>
+                            <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item text-primary font-monserrat" href="/register">register</a>
+                                <a class="dropdown-item text-primary font-monserrat" href="/login">login</a>
+                            </div>
+                        </li>
+                    }
                 </ul>
             </div>
         </nav>

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using DonateBlood.Models;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
@@ -27,6 +28,7 @@ namespace DonateBlood
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddAutoMapper(typeof(Startup));
             services.AddControllersWithViews();
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
             services.AddDbContext<AplicationDbContext>(opt =>{
@@ -36,10 +38,17 @@ namespace DonateBlood
             services.AddIdentity<AplicationUser,IdentityRole>(opt =>{
                 opt.Password.RequireUppercase = false;
                 opt.User.RequireUniqueEmail = true;
+                opt.Password.RequiredLength = 4;
+                opt.Password.RequireNonAlphanumeric = false;
+                opt.Password.RequireLowercase = false;
             }).AddEntityFrameworkStores<AplicationDbContext>();
 
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-            .AddCookie();
+            .AddCookie(opt =>{
+                opt.LoginPath = "/Home/Login";
+            });
+
+           
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -60,8 +69,8 @@ namespace DonateBlood
 
             app.UseRouting();
 
-            app.UseAuthorization();
             app.UseAuthentication();
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

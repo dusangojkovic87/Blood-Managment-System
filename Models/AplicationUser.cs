@@ -15,6 +15,9 @@ namespace DonateBlood.Models
         public string Phone { get; set; }
         [Required]
         public string BloodType { get; set; }
+        [Required,MaxLength(150)]
+        [EmailAddress]
+        public override string Email { get; set; }
         [Required,MaxLength(250)]
         public string Password { get; set; }   
     }

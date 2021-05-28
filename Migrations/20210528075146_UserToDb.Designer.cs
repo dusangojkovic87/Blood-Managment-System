@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DonateBlood.Migrations
 {
     [DbContext(typeof(AplicationDbContext))]
-    [Migration("20210526095657_addUserToDb")]
-    partial class addUserToDb
+    [Migration("20210528075146_UserToDb")]
+    partial class UserToDb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -38,6 +38,7 @@ namespace DonateBlood.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
+                        .IsRequired()
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
 

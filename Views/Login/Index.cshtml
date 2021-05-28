@@ -1,16 +1,19 @@
+@model LoginModel
 <h1 class="text-center font-monserrat font-weight-bold mt-4">Login</h1>
 <div class="container-fluid d-flex flex-column align-items-center mt-4">
     <div class="row">
-        <form action="#">
+        <form asp-action="login" method="post" id="loginForm">
             <div class="col-12 d-flex flex-column align-items-center">
                 <input class="login__input m-2" type="text" name="Email" placeholder="Email">
+                <span class="text-danger" asp-validation-for="Email"></span>
                 <input class="login__input m-2" type="text" name="Password" placeholder="Password">
+                <span class="text-danger" asp-validation-for="Password"></span>
             </div>
         </form>
     </div>
     <div class="row">
         <div class="col-12">
-            <button class="login__btn mt-4">Login</button>
+            <button class="login__btn mt-4" form="loginForm">Login</button>
         </div>
     </div>
 </div>

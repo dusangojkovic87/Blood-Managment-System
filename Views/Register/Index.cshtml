@@ -1,15 +1,20 @@
+@model AplicationUser
 <div class="container-fluid p-0">
     <h1 class="text-center font-monserrat font-size-2rem font-weight-bold mt-3">Register</h1>
-    <div class="row d-flex justify-content-center">
-        <form id="registerForm" class="register-form d-flex flex-column flex-sm-row align-items-center" action="#">
+   <div class="register-errors-container" asp-validation-for="User"></div>
+    <div class="row d-flex justify-content-center">  
+        <form id="registerForm" class="register-form d-flex flex-column flex-sm-row align-items-center" asp-action="register" method="post">
             <div class="col-6 d-flex flex-column align-items-center">
                 <input class="input__register m-3" type="text" name="Name" placeholder="Name">
+                 <span asp-validation-for="Name" class="text-danger"></span>  
                 <input class="input__register m-3" type="text" name="Email" placeholder="Email">
+                 <span asp-validation-for="Email" class="text-danger"></span>  
                 <input class="input__register m-3" type="text" name="Phone" placeholder="Phone">
+                 <span asp-validation-for="Phone" class="text-danger"></span>  
                  <div class="d-flex align-items-center blood-type-wrraper">
                     <label class="blood__type__label" for="bloodtype">Blood Type</label>
-                    <select class="border-red outline-none cursor-pointer m-4 pl-2" name="bloodtype" id="bloodtype">
-                        <option value="A+">A+</option>
+                    <select class="border-red outline-none cursor-pointer m-4 pl-2" name="BloodType" id="bloodtype">
+                        <option selected value="A+">A+</option>
                         <option value="A-">A-</option>
                         <option value="B+">B+</option>
                         <option value="B-">B-</option>
@@ -18,13 +23,16 @@
                         <option value="0+">0+</option>
                         <option value="0-">0-</option>
                     </select>
-
+                    <span asp-validation-for="BloodType" class="text-danger"></span>  
                 </div>
             </div>
             <div class="col-6 d-flex flex-column align-items-center bottom-register-col-margin">
                 <input class="input__register m-3" type="text" name="Surname" placeholder="Surname">
+                 <span asp-validation-for="Surname" class="text-danger"></span>  
                 <input class="input__register m-3" type="text" name="Location" placeholder="Location">
+                 <span asp-validation-for="Location" class="text-danger"></span>  
                 <input class="input__register m-3" type="text" name="Password" placeholder="Password">
+                 <span asp-validation-for="Password" class="text-danger"></span>  
             </div>
         </form>
         <div class="container-fluid">

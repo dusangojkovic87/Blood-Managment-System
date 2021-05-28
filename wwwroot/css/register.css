@@ -1,3 +1,17 @@
+.register-errors-container{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.register-errors-container ul li{
+    list-style: none;
+    color:#BF1212;
+    font-family: "Monserrat";
+    font-size: 1rem;
+    font-weight: bold;
+}
 .input__register{
     position: relative;
     width:14rem;
@@ -56,7 +70,7 @@
 
 @media only screen and (max-width:574px){
     .register__btn{
-       top:7rem;
+       top:20rem;
       
     }
 
