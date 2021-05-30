@@ -20,6 +20,13 @@
     transition: filter 0.5s;
 }
 
+#BloodTypes{
+    position: relative;
+    width:4rem;
+   border: 2px solid #BF1212;
+   margin-left: 2rem;
+}
+
 .donor-img-wrraper{
     position: relative;
     width: 250px;
@@ -44,6 +51,21 @@
     border-right: none;
     border-bottom: 2px solid #BF1212;
     outline: none;
+    margin-top: 2rem;
+}
+
+.filter__search__btn{
+    position: relative;
+    background-color: #BF1212;
+    color: white;
+    font-family: "Monserrat";
+    font-size: 1rem;
+    width: 5rem;
+    margin: 1rem;
+    height: 2rem;
+    top: 1rem;
+    font-weight: bold;
+
 }
 
 @media only screen and (max-width:768px){
@@ -57,16 +79,18 @@
     }
 }
 
-@media only screen and (max-width:410px){
+@media only screen and (max-width:576px){
     .region__input{
+        margin-left:0.5rem;
+    }
+
+    .filter__search__btn{
+        margin-left:2rem;
         width:9rem;
     }
+    
 }
 
-@media only screen and (max-width:335px){
-    .region__input{
-        width:7rem;
-    }
-}
+
 
 

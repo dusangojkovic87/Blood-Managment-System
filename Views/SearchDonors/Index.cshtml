@@ -1,36 +1,46 @@
-@model DonorsViewModel
-@{
-    Layout = "~/Views/Shared/_Layout.cshtml";
-    ViewData["Title"] = "Search Donors";
-}
-
+@model DonateBlood.Models.DonorsViewModel
 <div class="container-fluid p-0 d-flex flex-column justify-content-center  align-items-center">
     <h6 class="font-monserrat font-size-1-4rem mt-4 font-weight-bold">Filter search</h6>
-    <form class="d-flex justify-content-center w-100 mt-4">
+    <form asp-controller="SearchDonors" asp-action="Index" method="GET"
+        class="d-flex flex-column flex-sm-row justify-content-center w-100 mt-4">
         <div class="d-flex flex-column justify-content-center mr-4 ">
-            <label class="font-monserrat font-size-1rem font-weight-bold pl-4" for="blood">blood type</label> 
-            <select id="BloodTypes" asp-for="BloodList" asp-items="@Model.BloodList" multiple="multiple" name="BloodTypes" >
-                 <option>Please select one</option>
+            <label class="font-monserrat font-size-1rem font-weight-bold pl-4" for="blood">blood type</label>
+            <select name="BloodTypes" id="BloodTypes">
+                <option selected value="All">All</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="AB-">AB-</option>
+                <option value="AB+">AB+</option>
+                <option value="0+">0+</option>
+                <option value="0-">0-</option>
             </select>
         </div>
         <div class="ml-4 d-flex flex-column justify-content-center">
-            @* <label class="font-monserrat font-size-1rem font-weight-bold pl-4 " for="region">region</label>
-            <select class="border-red outline-none cursor-pointer m-4" name="region">
-                <option value="new york">new york</option>
-            </select> *@
             <input class="region__input" type="text" name="Region" placeholder="Region">
-
         </div>
+        <button class="filter__search__btn" type="submit">search</button>
     </form>
 </div>
 <div class="container-fluid p-4">
     <div class="row no-gutter">
         <div class="col-12 d-flex flex-column align-items-center justify-content-center">
-            @foreach (var donor in Model.Donors)
+            @if (Model.Donors.Count() > 0)
             {
-               <partial name="_Donor" model="donor"></partial>            
+                @foreach (var donor in Model.Donors)
+                {
+                    <partial name="_Donor" model="donor"></partial>
+                }
+
             }
-            
+            else
+            {
+                <h6 class="font-monserrat font-weight-bold font-size-2rem mt-4">Donor list empty!</h6>
+            }
+
+
         </div>
     </div>
 </div>
+<script src="~/js/searchdonors.js"></script>
