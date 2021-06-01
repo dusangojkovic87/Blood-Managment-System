@@ -17,7 +17,7 @@ namespace DonateBlood.Services.Repositories
 
         public IEnumerable<AplicationUser> GetAllDonors()
         {
-            return _context.Users.ToList();        
+            return _context.Users.AsQueryable();        
         }
     }
 }

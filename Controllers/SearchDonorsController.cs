@@ -1,8 +1,8 @@
 using System;
 using System.Linq;
-using DonateBlood.Models;
 using DonateBlood.Services.ServiceInterface;
 using Microsoft.AspNetCore.Mvc;
+using X.PagedList;
 
 namespace DonateBlood.Controllers
 {
@@ -17,30 +17,27 @@ namespace DonateBlood.Controllers
         }
 
 
-        public IActionResult Index([FromQuery] string BloodTypes = null, string Region = null)
+        public IActionResult Index([FromQuery] string BloodTypes = null, string Region = null, int? page = null)
         {
-            var donorsVm = new DonorsViewModel();
+            int pageSize = 3;
+            int pageNumber = (page ?? 1);
+
 
             if (!String.IsNullOrWhiteSpace(Region))
             {
-                donorsVm.Donors = _unitOfWork.Donor.GetAllDonors().Where(x => x.Location.Contains(Region));
-                return View(donorsVm);
+                return View(_unitOfWork.Donor.GetAllDonors().Where(x => x.Location.Contains(Region)).ToPagedList(pageNumber, pageSize));
             }
             else if (BloodTypes == "All" || String.IsNullOrWhiteSpace(BloodTypes))
             {
-                donorsVm.Donors = _unitOfWork.Donor.GetAllDonors();
-                return View(donorsVm);
+                return View(_unitOfWork.Donor.GetAllDonors().ToPagedList(pageNumber, pageSize));
             }
             else if (BloodTypes != "All")
             {
-                donorsVm.Donors = _unitOfWork.Donor.GetAllDonors().Where(x => x.BloodType == BloodTypes);
-                return View(donorsVm);
+                return View(_unitOfWork.Donor.GetAllDonors().Where(x => x.BloodType == BloodTypes).ToPagedList(pageNumber, pageSize));
 
             }
 
-
-            donorsVm.Donors = _unitOfWork.Donor.GetAllDonors();
-            return View(donorsVm);
+            return View(_unitOfWork.Donor.GetAllDonors().ToPagedList(pageNumber, pageSize));
         }
 
 

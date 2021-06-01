@@ -26,8 +26,22 @@ using DonateBlood.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "C:\Users\Dule\Desktop\Donate Blood\DonateBlood\Views\_ViewImports.cshtml"
+using X.PagedList.Mvc.Core;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "C:\Users\Dule\Desktop\Donate Blood\DonateBlood\Views\_ViewImports.cshtml"
+using X.PagedList;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"59b4c524caa84a44717151605a4c59b334824573", @"/Views/Shared/_Footer.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"819e1ee93b68b794b3d4fb0f1662a35a43342888", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"fe4695ddb175d0f3ccbd985505ebf9f71b48b72b", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared__Footer : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("d-flex flex-column align-items-center"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -61,7 +75,7 @@ using DonateBlood.Models;
         <div class=""col-12 col-md-6 bg-primary d-flex flex-column justify-content-center align-items-center p-4"">
             <h6 class=""font-monserrat text-center text-white font-weight-bold font-size-1-2rem"">Send us a message</h6>
             ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "59b4c524caa84a44717151605a4c59b3348245733944", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "59b4c524caa84a44717151605a4c59b3348245734299", async() => {
                 WriteLiteral(@"
                 <input class=""footer__input"" type=""text"" name=""name"" placeholder=""Name"">
                 <input class=""footer__input"" type=""text"" name=""email"" placeholder=""Email"">

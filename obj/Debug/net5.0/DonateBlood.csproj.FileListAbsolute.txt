@@ -438,3 +438,6 @@ C:\Users\Dule\Desktop\Donate Blood\DonateBlood\bin\Debug\net5.0\runtimes\win\lib
 C:\Users\Dule\Desktop\Donate Blood\DonateBlood\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\Dule\Desktop\Donate Blood\DonateBlood\bin\Debug\net5.0\AutoMapper.dll
 C:\Users\Dule\Desktop\Donate Blood\DonateBlood\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Dule\Desktop\Donate Blood\DonateBlood\bin\Debug\net5.0\JetBrains.Annotations.dll
+C:\Users\Dule\Desktop\Donate Blood\DonateBlood\bin\Debug\net5.0\X.PagedList.dll
+C:\Users\Dule\Desktop\Donate Blood\DonateBlood\bin\Debug\net5.0\X.PagedList.Mvc.Core.dll

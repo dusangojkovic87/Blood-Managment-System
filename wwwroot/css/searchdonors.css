@@ -68,6 +68,28 @@
 
 }
 
+.pagination__link{
+    background-color: white;
+    color: black;
+    font-weight: bold;
+}
+
+.pagination__link:hover{
+    background-color: #BF1212;
+    color: white;
+    font-weight: bold;
+}
+
+.pagination__link:active{
+    background-color: #b62d2d !important;
+    color: white;
+    font-weight: bold;
+}
+
+.page-item.active .page-link{
+    background-color: #fd0606;
+}
+
 @media only screen and (max-width:768px){
     .donor-container{
         height:400px;

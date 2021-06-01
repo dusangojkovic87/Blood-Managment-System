@@ -31,6 +31,8 @@ namespace DonateBlood
             services.AddDbContext<AplicationDbContext>(opt =>
             {
                 opt.UseSqlServer(Configuration.GetConnectionString("Default"));
+
+               
             });
 
             services.AddIdentity<AplicationUser, IdentityRole>(opt =>
