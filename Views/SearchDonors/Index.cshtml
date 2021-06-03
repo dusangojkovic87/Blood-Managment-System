@@ -1,10 +1,4 @@
 @model X.PagedList.IPagedList<AplicationUser>
-@* @using PagedList; *@
-@* @using PagedList.Mvc; *@
-@* @using X.PagedList.Mvc;
-    @using X.PagedList;
-    @using X.PagedList.Mvc.Core; *@
-
 @using X.PagedList;
 @using X.PagedList.Mvc.Core;
 @using X.PagedList.Web.Common
@@ -40,7 +34,10 @@
             {
                 @foreach (var donor in Model)
                 {
-                    <partial name="_Donor" model="donor"></partial>
+
+                <a asp-controller="SearchDonors" asp-action="DonorDetails" asp-route-userId=@{@donor.Id}>
+                    <partial asp-controller="SearchDonors" asp-action="Donor" asp-route-userId="@{@donor.Id}" name="_Donor" model="donor"></partial>
+                </a>
                 }
 
             }

@@ -7,13 +7,21 @@
                 <input class="login__input m-2" type="text" name="Email" placeholder="Email">
                 <span class="text-danger" asp-validation-for="Email"></span>
                 <input class="login__input m-2" type="text" name="Password" placeholder="Password">
-                <span class="text-danger" asp-validation-for="Password"></span>
-            </div>
+                <span class="text-danger" asp-validation-for="Password"></span>             
         </form>
-    </div>
-    <div class="row">
+         </div>
+</div>
+<div class="row">
         <div class="col-12">
             <button class="login__btn mt-4" form="loginForm">Login</button>
-        </div>
-    </div>
+        </div>   
 </div>
+<div class="row mt-4">
+    <div class="col-12">
+        <a class="register__link" asp-controller="Register" asp-action="Index">No account,register!</a>
+    </div>
+    </div>
+
+</div>
+</div>     
+

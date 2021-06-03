@@ -1,11 +1,13 @@
 using System;
 using System.Linq;
 using DonateBlood.Services.ServiceInterface;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using X.PagedList;
 
 namespace DonateBlood.Controllers
 {
+    [Authorize]
     public class SearchDonorsController : Controller
     {
 
@@ -40,7 +42,16 @@ namespace DonateBlood.Controllers
             return View(_unitOfWork.Donor.GetAllDonors().ToPagedList(pageNumber, pageSize));
         }
 
-
+        [HttpGet]
+        public IActionResult DonorDetails(string userId){
+        var donorDetails = _unitOfWork.Donor.GetUserById(userId);
+        if(donorDetails == null){
+            return NotFound();
+        }
+        return View("~/Views/SearchDonors/DonorDetails.cshtml",donorDetails);
+        }
 
     }
+
+   
 }

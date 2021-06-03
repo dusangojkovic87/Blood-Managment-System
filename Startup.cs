@@ -44,13 +44,13 @@ namespace DonateBlood
                 opt.Password.RequireLowercase = false;
             }).AddEntityFrameworkStores<AplicationDbContext>();
 
-            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-            .AddCookie(opt =>
-            {
-                opt.LoginPath = "/Home/Login";
+            services.ConfigureApplicationCookie(opt =>{
+                opt.LoginPath = "/Login";
+                opt.LogoutPath ="/Logout";
             });
 
-
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+            .AddCookie();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

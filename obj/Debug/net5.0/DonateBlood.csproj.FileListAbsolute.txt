@@ -441,3 +441,4 @@ C:\Users\Dule\Desktop\Donate Blood\DonateBlood\bin\Debug\net5.0\AutoMapper.Exten
 C:\Users\Dule\Desktop\Donate Blood\DonateBlood\bin\Debug\net5.0\JetBrains.Annotations.dll
 C:\Users\Dule\Desktop\Donate Blood\DonateBlood\bin\Debug\net5.0\X.PagedList.dll
 C:\Users\Dule\Desktop\Donate Blood\DonateBlood\bin\Debug\net5.0\X.PagedList.Mvc.Core.dll
+C:\Users\Dule\Desktop\Donate Blood\DonateBlood\obj\Debug\net5.0\Razor\Views\SearchDonors\DonorDetails.cshtml.g.cs

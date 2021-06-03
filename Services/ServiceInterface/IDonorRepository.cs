@@ -7,6 +7,7 @@ namespace DonateBlood.Services.ServiceInterface
     public interface IDonorRepository
     {
         IEnumerable<AplicationUser> GetAllDonors();
+        AplicationUser GetUserById(string userId);
         
     }
 }

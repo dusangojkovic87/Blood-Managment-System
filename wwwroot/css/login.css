@@ -19,3 +19,16 @@
     border-radius: 12px;
     padding: 0.5rem;
 }
+
+.register__link{
+    font-family: "Monserrat";
+    text-align: center;
+    color: #6e6565;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.register__link:hover{
+    text-decoration: none;
+    color: #4e4a4a;
+}

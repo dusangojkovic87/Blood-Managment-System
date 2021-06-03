@@ -115,6 +115,9 @@
 
 
 /*TEXT COLORS*/
+.text-red-primary{
+  color:#D40000;
+}
 .text-dark-red{
   color: red;
 }

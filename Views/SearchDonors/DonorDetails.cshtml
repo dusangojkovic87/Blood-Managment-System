@@ -1,0 +1,20 @@
+@model DonateBlood.Models.AplicationUser
+<div class="container-fluid">
+    <div class="row flex-column flex-sm-row align-items-center align-items-sm-start">
+        <div class="col-5 col-lg-4 mt-4">
+            <img class="img-fluid rounded" src="/images/donor/donor.png" alt="donor.png">
+            <p class="font-monserrat font-weight-bold font-size-1-2rem text-center pt-2">Dusan Gojkovic</p>
+        </div>
+        <div class="col-12 col-sm-6 mt-4">
+            <p class="font-monserrat text-grey"><span class="font-size-1rem font-weight-bold mr-2">Blood Type:</span>
+                <span class="font-size-1-4rem text-red-primary font-weight-bold">@{@Model.BloodType}</span>
+            </p>
+            <p class="font-monserrat text-grey"><span class="font-size-1rem font-weight-bold mr-2">Email:</span>
+               @{@Model.Email}</p>
+            <p class="font-monserrat text-grey"><span
+                    class="font-size-1rem font-weight-bold mr-2">Location:</span>@{@Model.Location}</p>
+            <p class="font-monserrat text-grey"><span
+                    class="font-size-1rem font-weight-bold mr-2">Phone:</span>@{@Model.Phone}</p>
+        </div>
+    </div>
+</div>

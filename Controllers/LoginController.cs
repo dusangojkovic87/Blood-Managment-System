@@ -1,10 +1,12 @@
 using System.Threading.Tasks;
 using DonateBlood.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DonateBlood.Controllers
 {
+    [AllowAnonymous]
     public class LoginController : Controller
     {
         private UserManager<AplicationUser> _userManager;
