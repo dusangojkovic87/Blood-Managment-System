@@ -1,18 +1,15 @@
+@model DonateBlood.Models.AplicationUser
 <div class="container-fluid mt-4">
-    <div class="row ">
-        <div class="col-4 col-md-3">
-            <img class="img-fluid " src="/images/donor/donor.png" alt="donor.png">
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-4 col-md-3">
-            <div class="dropdown">
+    <div class="row d-flex flex-column flex-sm-row align-items-center align-items-sm-start align-items-md-start">
+        <div class="col-6 col-md-4 col-lg-4 p-0 m-2 mb-4">
+            <img class="img-fluid w-100 " src="/images/donor/donor.png" alt="donor.png">
+            <div class="dropdown position-absolute w-100">
                 <button class="btn bg-primary dropdown-toggle" type="button" id="profileDropdownBtn"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     options
                 </button>
                 <div class="dropdown-menu bg-grey" aria-labelledby="profileDropdownBtn">
-                    <a class="dropdown-item profile__link d-flex align-items-center" href="#"> <span
+                    <a class="dropdown-item profile__link d-flex align-items-center" asp-controller="MyProfile" asp-action="EditProfile"> <span
                             class="edit__icon"></span>edit profile</a>
                     <a class="dropdown-item profile__link d-flex align-items-center" href="#"><span
                             class="post__icon"></span>show my posts</a>
@@ -20,6 +17,17 @@
                             class="delete__icon"></span>delete account</a>
                 </div>
             </div>
+        </div>
+        <div class="col-10 col-sm-5 mt-4 d-flex flex-column align-items-center align-items-md-start">
+            <ul class="p-0 w-100">
+                <li class=" my__profile__list__item text-uppercase"><span class="mr-2">@{@Model.Name}</span>
+                       <span>@{@Model.Surname}</span></li>
+                <li class=" my__profile__list__item">Blood Type: <span
+                        class="text-red-primary font-size-1-2rem">@{@Model.BloodType}</span></li>
+                <li class=" my__profile__list__item">Location: <span class="text-grey">@{@Model.Location}</span></li>
+                <li class=" my__profile__list__item">Email: <span class="text-grey">@{@Model.Email}</span></li>
+                <li class=" my__profile__list__item">Phone: <span class="text-grey">@{@Model.Phone}</span></li>
+            </ul>
         </div>
     </div>
 </div>

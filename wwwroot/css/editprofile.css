@@ -1,0 +1,38 @@
+.edit-profile-form{
+    position: relative;
+    width: 17rem;
+}
+
+.edit__profile__input{
+    width: 17rem;
+    margin: 1rem;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #BF1212;
+}
+
+#edit__profile__bloodtypes{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #BF1212;
+    width:calc(17rem - 4px);
+    outline: none;
+}
+
+.edit__profile__label{
+    position: relative;
+    font-family: "Monserrat";
+    font-weight: bold; 
+}
+
+.edit__profile__btn{
+    background-color: #BF1212;
+    color: white;
+    font-family: "Monserrat";
+    font-size: 1rem;
+    font-weight: bold;
+    width: 12rem;
+}
+

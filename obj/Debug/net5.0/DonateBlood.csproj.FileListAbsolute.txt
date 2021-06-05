@@ -442,3 +442,4 @@ C:\Users\Dule\Desktop\Donate Blood\DonateBlood\bin\Debug\net5.0\JetBrains.Annota
 C:\Users\Dule\Desktop\Donate Blood\DonateBlood\bin\Debug\net5.0\X.PagedList.dll
 C:\Users\Dule\Desktop\Donate Blood\DonateBlood\bin\Debug\net5.0\X.PagedList.Mvc.Core.dll
 C:\Users\Dule\Desktop\Donate Blood\DonateBlood\obj\Debug\net5.0\Razor\Views\SearchDonors\DonorDetails.cshtml.g.cs
+C:\Users\Dule\Desktop\Donate Blood\DonateBlood\obj\Debug\net5.0\Razor\Views\MyProfile\EditProfile.cshtml.g.cs

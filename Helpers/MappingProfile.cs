@@ -1,4 +1,5 @@
 using AutoMapper;
+using DonateBlood.Models;
 
 namespace DonateBlood.Helpers
 {
@@ -6,6 +7,7 @@ namespace DonateBlood.Helpers
     {
         public MappingProfile()
         {
+            CreateMap<AplicationUser,UserModel>().ReverseMap();
             
             
         }

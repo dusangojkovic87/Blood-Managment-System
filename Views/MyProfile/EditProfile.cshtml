@@ -1,0 +1,38 @@
+@model DonateBlood.Models.AplicationUser
+<div class="container-fluid">
+    <p class="text-center text-danger font-monserrat font-size-1rem" asp-validation-for="User"></p>
+    <div class="row d-flex justify-content-center">
+        <div class="col-4 d-flex justify-content-center">
+            <form asp-action="EditProfile" method="POST"
+                class="d-flex flex-column mt-4 d-flex align-items-center edit-profile-form">
+                <input type="text" name="Id" value="@{@Model.Id}" hidden>
+                <input type="text" name="UserName" value="@{@Model.UserName}" hidden>
+                <input class="edit__profile__input" type="text" name="Name" placeholder="Name" value="@{@Model.Name}">
+                <input class="edit__profile__input" type="text" name="Surname" placeholder="Surname"
+                    value="@{@Model.Surname}">
+                <label class="edit__profile__label text-grey" for="BloodTypes">Select Blood Type</label>
+                <select name="BloodType" id="edit__profile__bloodtypes">
+                    <option selected value="@{@Model.BloodType}">@{@Model.BloodType}</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="0+">0+</option>
+                    <option value="0-">0-</option>
+                </select>
+                <input class="edit__profile__input" type="text" name="Email" placeholder="Email"
+                    value="@{@Model.Email}">
+                <input class="edit__profile__input" type="text" name="Location" placeholder="Location"
+                    value="@{@Model.Location}">
+                <input class="edit__profile__input" type="text" name="Phone" placeholder="Phone"
+                    value="@{@Model.Phone}">
+                <input class="edit__profile__input" type="text" name="Password" placeholder="Password"
+                    value="@{@Model.Password}">
+                <button type="submit" class="edit__profile__btn mt-4">Save</button>
+            </form>
+
+        </div>
+    </div>
+</div>

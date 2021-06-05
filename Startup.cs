@@ -38,7 +38,7 @@ namespace DonateBlood
             services.AddIdentity<AplicationUser, IdentityRole>(opt =>
             {
                 opt.Password.RequireUppercase = false;
-                opt.User.RequireUniqueEmail = true;
+                opt.User.RequireUniqueEmail = false;
                 opt.Password.RequiredLength = 4;
                 opt.Password.RequireNonAlphanumeric = false;
                 opt.Password.RequireLowercase = false;
