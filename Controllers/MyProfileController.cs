@@ -1,7 +1,12 @@
+using System.IO;
 using System.Threading.Tasks;
 using AutoMapper;
+using DonateBlood.Helpers;
 using DonateBlood.Models;
+using DonateBlood.Services.ServiceInterface;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,9 +17,14 @@ namespace DonateBlood.Controllers
     {
         private UserManager<AplicationUser> _userManager;
         private IMapper _mapper;
+        private IUnitOfWork _unitOfWork;
 
-        public MyProfileController(UserManager<AplicationUser> userManager, IMapper mapper)
+        private  IWebHostEnvironment _env;
+
+        public MyProfileController(UserManager<AplicationUser> userManager, IMapper mapper, IUnitOfWork unitOfWork, IWebHostEnvironment env)
         {
+            _env = env;
+            _unitOfWork = unitOfWork;
             _mapper = mapper;
             _userManager = userManager;
 
@@ -59,7 +69,7 @@ namespace DonateBlood.Controllers
             userFromDb.Phone = model.Phone;
             userFromDb.Password = model.Password;
 
-          
+
             var result = await _userManager.UpdateAsync(userFromDb);
             if (!result.Succeeded)
             {
@@ -71,6 +81,38 @@ namespace DonateBlood.Controllers
             return RedirectToAction("Index");
 
 
+
+        }
+
+        [HttpGet]
+        public IActionResult ChangeImage()
+        {
+            return View("~/Views/MyProfile/ChangeImage.cshtml");
+
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> ChangeImage(IFormFile image)
+        {
+
+            if (image != null)
+            {
+                var root = _env.WebRootPath;
+                ViewBag.SelectImage = "";
+                var user = await _userManager.GetUserAsync(HttpContext.User);
+                var imagePath = Uploader.UploadProfileImage(image, root);
+                user.ProfileImg = imagePath;
+                _unitOfWork.Donor.SaveProfileImage(user);
+                _unitOfWork.Save();
+                return Redirect("Index");
+
+            }
+            else
+            {
+                ViewBag.SelectImage = "Please select image!";
+                return View("~/Views/MyProfile/ChangeImage.cshtml");
+
+            }
 
         }
 

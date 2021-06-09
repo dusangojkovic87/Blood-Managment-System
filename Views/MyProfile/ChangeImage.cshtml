@@ -1,0 +1,17 @@
+<div class="container-fluid">
+    <div class="row d-flex justify-content-center height-250px">
+        <div class="col-6 col-md-3 mt-4">
+              <img class="img-fluid position-absolute w-100 h-100 rounded" src="/images/donor/donor.png" alt="donor.png">
+        </div>   
+    </div>
+    <div class="row">
+        <div class="col-12 mt-4 d-flex flex-column justify-content-start align-items-center">
+            <p class="text-danger text-center d-block m-2">@ViewBag.SelectImage</p> <br>
+            <form asp-controller="MyProfile" asp-action="ChangeImage" method="POST" enctype="multipart/form-data" class="mt-4">
+                   <label for="ProfileImg">Select Image:</label> <br>
+                   <input type="file" name="image"> <br>
+                   <button class="mt-4" >Upload</button>
+            </form>
+        </div>
+    </div>
+</div>

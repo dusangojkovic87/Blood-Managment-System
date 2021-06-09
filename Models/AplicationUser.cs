@@ -19,6 +19,7 @@ namespace DonateBlood.Models
         [EmailAddress]
         public override string Email { get; set; }
         [Required,MaxLength(250)]
-        public string Password { get; set; }   
+        public string Password { get; set; }  
+        public string ProfileImg {get;set;} 
     }
 }

@@ -24,5 +24,10 @@ namespace DonateBlood.Services.Repositories
             return _context.Users.FirstOrDefault(u => u.Id == userId );
 
         }
+
+        public void SaveProfileImage(AplicationUser model)
+        {
+           _context.Users.Update(model);
+        }
     }
 }

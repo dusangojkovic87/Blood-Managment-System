@@ -8,6 +8,7 @@ namespace DonateBlood.Services.ServiceInterface
     {
         IEnumerable<AplicationUser> GetAllDonors();
         AplicationUser GetUserById(string userId);
+        void SaveProfileImage(AplicationUser model);
         
     }
 }

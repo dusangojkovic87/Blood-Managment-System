@@ -35,7 +35,7 @@
                 @foreach (var donor in Model)
                 {
 
-                <a asp-controller="SearchDonors" asp-action="DonorDetails" asp-route-userId=@{@donor.Id}>
+                <a class="donor__details__link" asp-controller="SearchDonors" asp-action="DonorDetails" asp-route-userId=@{@donor.Id}>
                     <partial asp-controller="SearchDonors" asp-action="Donor" asp-route-userId="@{@donor.Id}" name="_Donor" model="donor"></partial>
                 </a>
                 }

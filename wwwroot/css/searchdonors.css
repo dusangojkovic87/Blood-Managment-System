@@ -8,6 +8,8 @@
     left:1px;
 }
 
+
+
 .donor-container{
     position: relative;
     width:500px;
@@ -15,9 +17,17 @@
     cursor: pointer;
 }
 
+.donor__details__link:hover{
+    text-decoration: none;
+
+}
+
 .donor-container:hover{
-    filter: drop-shadow(0 0 0.50rem black);
-    transition: filter 0.5s;
+   transform: scale(1.03);
+   filter:drop-shadow(0 0 0.75rem crimson);
+   transition: all 0.3s;
+   
+  
 }
 
 #BloodTypes{
