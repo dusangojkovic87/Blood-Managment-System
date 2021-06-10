@@ -1,4 +1,3 @@
-using System.IO;
 using System.Threading.Tasks;
 using AutoMapper;
 using DonateBlood.Helpers;
@@ -85,9 +84,14 @@ namespace DonateBlood.Controllers
         }
 
         [HttpGet]
-        public IActionResult ChangeImage()
+        public async Task<IActionResult> ChangeImage()
         {
-            return View("~/Views/MyProfile/ChangeImage.cshtml");
+            var user = await _userManager.GetUserAsync(HttpContext.User);
+            if (user == null)
+            {
+                return NotFound();
+            }
+            return View("~/Views/MyProfile/ChangeImage.cshtml",user);
 
         }
 
@@ -98,7 +102,6 @@ namespace DonateBlood.Controllers
             if (image != null)
             {
                 var root = _env.WebRootPath;
-                ViewBag.SelectImage = "";
                 var user = await _userManager.GetUserAsync(HttpContext.User);
                 var imagePath = Uploader.UploadProfileImage(image, root);
                 user.ProfileImg = imagePath;
@@ -109,12 +112,14 @@ namespace DonateBlood.Controllers
             }
             else
             {
+                var user = await _userManager.GetUserAsync(HttpContext.User);
                 ViewBag.SelectImage = "Please select image!";
-                return View("~/Views/MyProfile/ChangeImage.cshtml");
+                return View("~/Views/MyProfile/ChangeImage.cshtml",user);
 
             }
-
+    
         }
+        
 
     }
 }
