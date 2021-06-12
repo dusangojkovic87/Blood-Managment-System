@@ -7,8 +7,11 @@ namespace DonateBlood.Services.ServiceInterface
     public interface IDonorRepository
     {
         IEnumerable<AplicationUser> GetAllDonors();
-        AplicationUser GetUserById(string userId);
+        AplicationUser GetUserById(int userId);
         void SaveProfileImage(AplicationUser model);
+        Inbox GetUserInbox(int userId);
+
+
         
     }
 }

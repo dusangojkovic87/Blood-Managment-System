@@ -1,9 +1,10 @@
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Identity;
 
 namespace DonateBlood.Models
 {
-    public class AplicationUser:IdentityUser
+    public class AplicationUser:IdentityUser<int>
     {
         [Required,MaxLength(100)]
         public string Name { get; set; }
@@ -21,5 +22,7 @@ namespace DonateBlood.Models
         [Required,MaxLength(250)]
         public string Password { get; set; }  
         public string ProfileImg {get;set;} 
+        public int InboxId { get; set; }
+        ICollection<Inbox> Inbox {get;set;}
     }
 }

@@ -99,6 +99,44 @@
 .page-item.active .page-link{
     background-color: #fd0606;
 }
+.message__donor__form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.send__msg__btn{
+    position: relative;
+    width: 12rem;
+    background-color: #fd0606;
+    color: white;
+    font-family: "Monserrat";
+    font-size: 1rem;
+    margin-bottom:4rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#MessageToDonor{
+    position: relative;
+    width:80%;
+    height: 14rem;
+}
+
+#messageModal{
+    position: fixed;
+    top:0;
+    left: 0;
+    margin: 0 auto;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 100vh;
+    z-index: 1000;
+}
+
+.close-message-modal{
+    display: none !important;
+}
 
 @media only screen and (max-width:768px){
     .donor-container{

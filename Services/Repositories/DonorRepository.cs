@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using DonateBlood.Models;
 using DonateBlood.Services.ServiceInterface;
+using Microsoft.EntityFrameworkCore;
 
 namespace DonateBlood.Services.Repositories
 {
@@ -20,7 +21,7 @@ namespace DonateBlood.Services.Repositories
             return _context.Users.AsQueryable();        
         }
 
-        public AplicationUser GetUserById(string userId){
+        public AplicationUser GetUserById(int userId){
             return _context.Users.FirstOrDefault(u => u.Id == userId );
 
         }
@@ -28,6 +29,12 @@ namespace DonateBlood.Services.Repositories
         public void SaveProfileImage(AplicationUser model)
         {
            _context.Users.Update(model);
+        }
+
+        public Inbox GetUserInbox(int userId){
+            
+        return  _context.Inbox.SingleOrDefault(i => i.User.Id == userId);
+
         }
     }
 }

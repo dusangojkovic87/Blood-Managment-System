@@ -1,8 +1,23 @@
-@model DonateBlood.Models.AplicationUser 
+@model DonateBlood.Models.AplicationUser
+ <div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Message to Donor</h5>
+      </div>
+      <div class="modal-body">
+            <p class="modal__status__text font-monserrat text-center"></p>
+      </div>
+      <div class="modal-footer">
+        <button id="closeMsgModal" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="container-fluid">
     <div class="row flex-column flex-sm-row align-items-center align-items-sm-start">
         <div class="col-5 col-lg-4 mt-4">
-            <img class="img-fluid rounded" src="/images/donor/donor.png" alt="donor.png">
+            <img class="img-fluid rounded" src="/@{@Model.ProfileImg}" alt="/@{@Model.ProfileImg}">
             <p class="font-monserrat font-weight-bold font-size-1-2rem text-center pt-2">Dusan Gojkovic</p>
         </div>
         <div class="col-12 col-sm-6 mt-4">
@@ -10,11 +25,25 @@
                 <span class="font-size-1-4rem text-red-primary font-weight-bold"> @{@Model.BloodType} </span>
             </p>
             <p class="font-monserrat text-grey"><span class="font-size-1rem font-weight-bold mr-2">Email:</span>
-            @{@Model.Email}</p>
+                @{@Model.Email}</p>
             <p class="font-monserrat text-grey"><span
                     class="font-size-1rem font-weight-bold mr-2">Location:</span>@{@Model.Location}</p>
             <p class="font-monserrat text-grey"><span
                     class="font-size-1rem font-weight-bold mr-2">Phone:</span>@{@Model.Phone}</p>
         </div>
     </div>
+    <div class="row d-flex justify-content-center">
+        <div class="col-12 mt-4">
+            <h6 class="font-monserrat text-center font-weight-bold w-100">Send message to donor</h6>
+            <form class="message__donor__form">
+                <input id="donorId" name="id" type="text" hidden value="@{@Model.Id}">
+                <input id="senderName" name="id" type="text" hidden value="@{@User.Identity.Name}">
+                <textarea name="Message" id="MessageToDonor" cols="100" rows="7"></textarea>
+                <button class="send__msg__btn mt-4">Send</button>
+            </form>
+        </div>
+    </div>
 </div>
+@section Scripts{
+    <script src="~/js/searchdonors.js" asp-append-version="true"></script>
+}

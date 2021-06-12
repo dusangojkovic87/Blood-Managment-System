@@ -31,11 +31,10 @@ namespace DonateBlood
             services.AddDbContext<AplicationDbContext>(opt =>
             {
                 opt.UseSqlServer(Configuration.GetConnectionString("Default"));
-
-               
+  
             });
 
-            services.AddIdentity<AplicationUser, IdentityRole>(opt =>
+            services.AddIdentity<AplicationUser, AplicationRole>(opt =>
             {
                 opt.Password.RequireUppercase = false;
                 opt.User.RequireUniqueEmail = false;
@@ -51,6 +50,13 @@ namespace DonateBlood
 
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
             .AddCookie();
+
+            services.AddCors(opt =>{
+                opt.AddPolicy("AllowEverything",builder =>{
+                   builder.AllowAnyOrigin();
+                   builder.AllowAnyHeader();
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

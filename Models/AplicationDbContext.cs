@@ -4,14 +4,16 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DonateBlood.Models
 {
-    public class AplicationDbContext:IdentityDbContext<AplicationUser,IdentityRole, string>
+    public class AplicationDbContext:IdentityDbContext<AplicationUser,AplicationRole, int>
     {
         public AplicationDbContext(DbContextOptions<AplicationDbContext> options):base(options)
         {
             
         }
 
-        DbSet<AplicationUser> AplicationUser {get;set;}
+        public DbSet<AplicationUser> AplicationUser {get;set;}
+        public DbSet<Inbox> Inbox {get;set;}
+
         
     }
 }

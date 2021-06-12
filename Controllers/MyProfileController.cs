@@ -60,7 +60,7 @@ namespace DonateBlood.Controllers
                 return View("~/Views/MyProfile/EditProfile.cshtml", model);
 
             }
-            var userFromDb = await _userManager.FindByIdAsync(model.Id);
+            var userFromDb = await _userManager.FindByIdAsync("model.Id");
             userFromDb.Name = model.Name;
             userFromDb.Surname = model.Surname;
             userFromDb.Email = model.Email;
