@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="~/css/login.css" />
     <link rel="stylesheet" href="~/css/register.css" />
     <link rel="stylesheet" href="~/css/myprofile.css" />
-     <link rel="stylesheet" href="~/css/editprofile.css" />
+    <link rel="stylesheet" href="~/css/editprofile.css" />
+    <link rel="stylesheet" href="~/css/requestblood.css" />
 </head>
 
 <body>
@@ -43,8 +44,8 @@
                             blood type requests
                         </a>
                         <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item text-primary font-monserrat" href="#">request blood</a>
-                            <a class="dropdown-item text-primary font-monserrat" href="#">view blood requests</a>
+                            <a class="dropdown-item text-primary font-monserrat" asp-controller="RequestBlood" asp-action="Index">request blood</a>
+                            <a class="dropdown-item text-primary font-monserrat" asp-controller="BloodRequests" asp-action="Index">view blood requests</a>
                         </div>
                     </li>
                     <li class="nav-item">

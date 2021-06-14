@@ -35,9 +35,14 @@
                 @foreach (var donor in Model)
                 {
 
-                <a class="donor__details__link" asp-controller="SearchDonors" asp-action="DonorDetails" asp-route-userId=@{@donor.Id}>
-                    <partial asp-controller="SearchDonors" asp-action="Donor" asp-route-userId="@{@donor.Id}" name="_Donor" model="donor"></partial>
-                </a>
+                    <a class="donor__details__link" asp-controller="SearchDonors" asp-action="DonorDetails"
+                asp-route-userId=@{@donor.Id}>
+                        @if (donor.Email != User.Identity.Name)
+                        {
+                            <partial asp-controller="SearchDonors" asp-action="Donor" asp-route-userId="@{@donor.Id}" name="_Donor"
+                    model="donor"></partial>
+                        }
+                    </a>
                 }
 
             }
@@ -65,6 +70,5 @@
 
 
         </div>
-
     </div>
     <script src="~/js/searchdonors.js"></script>

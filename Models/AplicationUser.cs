@@ -6,6 +6,11 @@ namespace DonateBlood.Models
 {
     public class AplicationUser:IdentityUser<int>
     {
+        public AplicationUser()
+        {
+            ProfileImg = "images/default/defaultProfileImage.png";      
+        }
+
         [Required,MaxLength(100)]
         public string Name { get; set; }
         [Required,MaxLength(100)]

@@ -346,3 +346,7 @@ footer button{
   padding-left: 1rem;
   font-weight: bold;
 }
+
+.donor__profile__img{
+  object-fit: cover;
+}

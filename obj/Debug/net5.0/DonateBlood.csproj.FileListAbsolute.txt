@@ -444,3 +444,6 @@ C:\Users\Dule\Desktop\Donate Blood\DonateBlood\bin\Debug\net5.0\X.PagedList.Mvc.
 C:\Users\Dule\Desktop\Donate Blood\DonateBlood\obj\Debug\net5.0\Razor\Views\SearchDonors\DonorDetails.cshtml.g.cs
 C:\Users\Dule\Desktop\Donate Blood\DonateBlood\obj\Debug\net5.0\Razor\Views\MyProfile\EditProfile.cshtml.g.cs
 C:\Users\Dule\Desktop\Donate Blood\DonateBlood\obj\Debug\net5.0\Razor\Views\MyProfile\ChangeImage.cshtml.g.cs
+C:\Users\Dule\Desktop\Donate Blood\DonateBlood\obj\Debug\net5.0\Razor\Views\DeleteAccount\Index.cshtml.g.cs
+C:\Users\Dule\Desktop\Donate Blood\DonateBlood\obj\Debug\net5.0\Razor\Views\RequestBlood\Index.cshtml.g.cs
+C:\Users\Dule\Desktop\Donate Blood\DonateBlood\obj\Debug\net5.0\Razor\Views\BloodRequests\Index.cshtml.g.cs

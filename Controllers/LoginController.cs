@@ -33,7 +33,7 @@ namespace DonateBlood.Controllers
                 var user = await _userManager.FindByEmailAsync(model.Email);
                 if (user == null)
                 {
-                    ModelState.AddModelError("User", "No user with this email,register first!");
+                    ModelState.AddModelError("Email", "No user with this email,register first!");
                     return View("Index", model);
                 }
 
