@@ -1,7 +1,12 @@
+@model ICollection<DonateBlood.Models.BloodRequestShowModel>
 <div class="container-fluid">
     <div class="row">
         <div class="col-12 d-flex justify-content-center">
-            <partial name="_BloodRequest" />
+            @foreach (var request in Model)
+            {
+                 <partial name="_BloodRequest" model = "request" />
+            }
+           
         </div>
     </div>
 </div>

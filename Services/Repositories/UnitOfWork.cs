@@ -1,3 +1,4 @@
+using AutoMapper;
 using DonateBlood.Models;
 using DonateBlood.Services.ServiceInterface;
 
@@ -5,7 +6,7 @@ namespace DonateBlood.Services.Repositories
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private  AplicationDbContext _context;
+        private AplicationDbContext _context;
         public UnitOfWork(AplicationDbContext context)
         {
             _context = context;
@@ -15,9 +16,9 @@ namespace DonateBlood.Services.Repositories
 
         }
 
-        public IDonorRepository Donor{get;set;}
+        public IDonorRepository Donor { get; set; }
         public IMessageRepository Inbox { get; set; }
-        public IBloodRequestRepository BloodRequest {get;set;}
+        public IBloodRequestRepository BloodRequest { get; set; }
 
         public void Dispose()
         {
