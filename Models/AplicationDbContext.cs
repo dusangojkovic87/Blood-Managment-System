@@ -13,6 +13,7 @@ namespace DonateBlood.Models
 
         public DbSet<AplicationUser> AplicationUser {get;set;}
         public DbSet<Inbox> Inbox {get;set;}
+        public DbSet<BloodRequest> BloodRequests {get;set;}
 
         
     }

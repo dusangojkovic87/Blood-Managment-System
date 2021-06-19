@@ -6,6 +6,7 @@ namespace DonateBlood.Services.ServiceInterface
     {
         IDonorRepository Donor {get;set;}
         IMessageRepository Inbox {get;set;}
+        IBloodRequestRepository BloodRequest {get;set;}
         int Save();
          
     }

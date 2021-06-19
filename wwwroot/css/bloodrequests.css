@@ -1,0 +1,29 @@
+.blood-request-container{
+    position: relative;
+    width: 254px;
+    display: flex;
+    flex-direction: column;
+    height:500px;
+}
+
+.blood__req__img{
+    height: calc(250px - 2px);
+}
+
+.request__read__more__btn{
+    background-color: #6d7457;
+    font-family: "Monserrat";
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    width: 12rem;
+    margin-top:2rem;
+}
+
+@media only screen and (min-width:576px){
+    .blood-request-container{
+        flex-direction: row;
+        width: 504px;
+        height: 250px;
+    }
+}

@@ -28,6 +28,8 @@ namespace DonateBlood.Models
         public string Password { get; set; }  
         public string ProfileImg {get;set;} 
         public int InboxId { get; set; }
+        public int BloodRequestId { get; set; }
         ICollection<Inbox> Inbox {get;set;}
+        ICollection<BloodRequest> BloodRequest {get;set;}
     }
 }

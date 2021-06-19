@@ -11,11 +11,13 @@ namespace DonateBlood.Services.Repositories
             _context = context;
             Donor = new DonorRepository(_context);
             Inbox = new MessageRepository(_context);
+            BloodRequest = new BloodRequestRepository(_context);
 
         }
 
         public IDonorRepository Donor{get;set;}
         public IMessageRepository Inbox { get; set; }
+        public IBloodRequestRepository BloodRequest {get;set;}
 
         public void Dispose()
         {
