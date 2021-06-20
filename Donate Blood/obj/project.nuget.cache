@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XYiTPBUVR4UnJekBaHoGao21iMCItD8rpvl42SzyWAD2j6DZwjlDG58bgq/Q6U9pUJFQap+w3Eol0hiP7de0JQ==",
+  "dgSpecHash": "6doD0jWJBLY/NIUXAgSoqF+4/1GM7kCKEDsfQv1koKvlhnOdrGuf0h0+bV9jAqijZmjk3DKJwUwQipD0ebwecg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Dule\\Desktop\\Donate Blood\\DonateBlood\\DonateBlood.csproj",
+  "projectFilePath": "C:\\Users\\Dule\\Desktop\\Donate Blood\\DonateBlood\\Donate Blood\\DonateBlood.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Dule\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\Dule\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",

@@ -7550,11 +7550,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Dule\\Desktop\\Donate Blood\\DonateBlood\\DonateBlood.csproj",
+      "projectUniqueName": "C:\\Users\\Dule\\Desktop\\Donate Blood\\DonateBlood\\Donate Blood\\DonateBlood.csproj",
       "projectName": "DonateBlood",
-      "projectPath": "C:\\Users\\Dule\\Desktop\\Donate Blood\\DonateBlood\\DonateBlood.csproj",
+      "projectPath": "C:\\Users\\Dule\\Desktop\\Donate Blood\\DonateBlood\\Donate Blood\\DonateBlood.csproj",
       "packagesPath": "C:\\Users\\Dule\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Dule\\Desktop\\Donate Blood\\DonateBlood\\obj\\",
+      "outputPath": "C:\\Users\\Dule\\Desktop\\Donate Blood\\DonateBlood\\Donate Blood\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Dule\\AppData\\Roaming\\NuGet\\NuGet.Config",
