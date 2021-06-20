@@ -449,3 +449,5 @@ C:\Users\Dule\Desktop\Donate Blood\DonateBlood\obj\Debug\net5.0\Razor\Views\Requ
 C:\Users\Dule\Desktop\Donate Blood\DonateBlood\obj\Debug\net5.0\Razor\Views\BloodRequests\Index.cshtml.g.cs
 C:\Users\Dule\Desktop\Donate Blood\DonateBlood\obj\Debug\net5.0\Razor\Views\Shared\_BloodRequest.cshtml.g.cs
 C:\Users\Dule\Desktop\Donate Blood\DonateBlood\obj\Debug\net5.0\Razor\Views\BloodRequests\BloodRequestDetails.cshtml.g.cs
+C:\Users\Dule\Desktop\Donate Blood\DonateBlood\obj\Debug\net5.0\Razor\Views\MyProfile\MyPosts.cshtml.g.cs
+C:\Users\Dule\Desktop\Donate Blood\DonateBlood\obj\Debug\net5.0\Razor\Views\Shared\_MyBloodRequest.cshtml.g.cs

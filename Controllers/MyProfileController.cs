@@ -1,3 +1,4 @@
+using System;
 using System.Threading.Tasks;
 using AutoMapper;
 using DonateBlood.Helpers;
@@ -8,6 +9,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using X.PagedList;
 
 namespace DonateBlood.Controllers
 {
@@ -119,7 +121,32 @@ namespace DonateBlood.Controllers
             }
     
         }
-        
 
+        [HttpGet]
+        public async  Task<IActionResult> MyPosts(int? page = null){
+        int pageSize = 3;
+        int pageNumber = (page ?? 1);
+
+        var user = await  _userManager.FindByEmailAsync(HttpContext.User.Identity.Name);
+        var myPosts = _unitOfWork.BloodRequest.GetBloodRequestsByUserId(user.Id).ToPagedList(pageNumber, pageSize);
+        return View("~/Views/MyProfile/MyPosts.cshtml",myPosts);
+        }
+
+        [HttpDelete]
+        public  IActionResult DeletePost([FromQuery] int Id){
+        if(Id != 0 ){
+
+          _unitOfWork.BloodRequest.deletePost(Id);
+          _unitOfWork.Save();
+          return Content("success");
+
+         }
+         return NotFound();
+         
+        }
+       
+        
+    
+        }
+    
     }
-}

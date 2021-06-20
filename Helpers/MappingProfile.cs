@@ -7,8 +7,8 @@ namespace DonateBlood.Helpers
     {
         public MappingProfile()
         {
-            
-             
+            CreateMap<BloodRequest,BloodRequestShowModel>().ReverseMap();
+              
         }
         
     }

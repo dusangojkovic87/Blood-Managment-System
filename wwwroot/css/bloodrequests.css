@@ -36,6 +36,15 @@
     width: 12rem;
 }
 
+.delete__post__btn{
+    background-color: #BF1212;
+    color: white;
+    font-weight: bold;
+    font-family: "Monserrat";
+    font-size: 1rem;
+    width: 12rem;
+}
+
 @media only screen and (min-width:576px){
     .blood-request-container{
         flex-direction: row;

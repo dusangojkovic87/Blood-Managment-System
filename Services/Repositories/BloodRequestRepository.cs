@@ -21,6 +21,12 @@ namespace DonateBlood.Services.Repositories
             _context.BloodRequests.Add(model);
         }
 
+        public void deletePost(int Id)
+        {
+            var postToDelete = _context.BloodRequests.SingleOrDefault(i => i.Id == Id);
+            _context.BloodRequests.Remove(postToDelete);
+        }
+
         public BloodRequestShowModel getBloodRequestById(int Id)
         {
 
@@ -53,6 +59,24 @@ namespace DonateBlood.Services.Repositories
             return bloodrequest;
 
         }
+
+        public ICollection<BloodRequestShowModel> GetBloodRequestsByUserId(int Id)
+        {
+             var bloodrequest = _context.BloodRequests.Where(i => i.User.Id == Id).Include(i => i.User).Select(i => new BloodRequestShowModel
+            {
+                Id = i.Id,
+                ProfileImg = i.User.ProfileImg,
+                DonateLocation = i.DonateLocation,
+                BloodReqDesc = i.BloodReqDesc,
+                BloodType = i.BloodType,
+                AplicationUserId = i.User.Id
+
+            }).ToList();
+            
+            return bloodrequest;
+        }
+
+        
     }
 
 }
