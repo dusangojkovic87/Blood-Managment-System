@@ -11,13 +11,29 @@
 }
 
 .request__read__more__btn{
-    background-color: #6d7457;
+    background-color: #20201f;
     font-family: "Monserrat";
     font-size: 1rem;
     font-weight: bold;
     color: white;
     width: 12rem;
     margin-top:2rem;
+}
+
+.request__sender__img{
+    border:4px solid #BF1212;
+    border-radius: 20%;
+    object-fit: cover;
+}
+
+.contact__req__sender__btn{
+    background-color: #BF1212;
+    color: white;
+    font-family: "Monserrat";
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0 auto;
+    width: 12rem;
 }
 
 @media only screen and (min-width:576px){

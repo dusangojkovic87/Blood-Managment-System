@@ -11,10 +11,9 @@
         </div>
         <p class="mt-2 font-monserrat font-size-1rem font-weight-bold">Location:</p>
         <p class="font-monserrat font-size-1rem font-weight-bold">@{@Model.DonateLocation}</p>
+        <p class="font-monserrat font-size-0-5rem font-weight-bold">@{@Model.CreatedAt.ToString("g")}</p>
         <div>
-            <button class="request__read__more__btn rounded">read more</button>
+            <button class="request__read__more__btn rounded" onclick="redirectToDetails('@Model.Id')">read more</button>
         </div>
     </div>
-
-
 </div>

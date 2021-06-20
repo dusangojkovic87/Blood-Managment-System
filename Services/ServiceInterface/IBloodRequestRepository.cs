@@ -8,5 +8,6 @@ namespace DonateBlood.Services.ServiceInterface
     {
          void addBloodRequest(BloodRequest model);
          ICollection<BloodRequestShowModel> getBloodRequests();
+         BloodRequestShowModel getBloodRequestById(int Id);
     }
 }

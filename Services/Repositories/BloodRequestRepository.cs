@@ -21,6 +21,23 @@ namespace DonateBlood.Services.Repositories
             _context.BloodRequests.Add(model);
         }
 
+        public BloodRequestShowModel getBloodRequestById(int Id)
+        {
+
+            var bloodrequest = _context.BloodRequests.Where(i => i.Id == Id).Include(i => i.User).Select(i => new BloodRequestShowModel
+            {
+                Id = i.Id,
+                ProfileImg = i.User.ProfileImg,
+                DonateLocation = i.DonateLocation,
+                BloodReqDesc = i.BloodReqDesc,
+                BloodType = i.BloodType,
+                AplicationUserId = i.User.Id
+            }).FirstOrDefault();
+
+            return bloodrequest;
+
+        }
+
         public ICollection<BloodRequestShowModel> getBloodRequests()
         {
             var bloodrequest = _context.BloodRequests.Include(i => i.User).Select(i => new BloodRequestShowModel
@@ -29,7 +46,8 @@ namespace DonateBlood.Services.Repositories
                 ProfileImg = i.User.ProfileImg,
                 DonateLocation = i.DonateLocation,
                 BloodReqDesc = i.BloodReqDesc,
-                BloodType = i.BloodType
+                BloodType = i.BloodType,
+                AplicationUserId = i.User.Id
 
             }).ToList();
             return bloodrequest;

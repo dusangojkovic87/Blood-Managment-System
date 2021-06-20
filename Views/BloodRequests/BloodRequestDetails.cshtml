@@ -1,0 +1,26 @@
+@model DonateBlood.Models.BloodRequestShowModel
+<div class="container-fluid">
+    <div class="row mt-4 d-flex justify-content-center">
+        <div class="col-6 col-md-4  height-250px mb-4">
+            <img class="position-absolute w-100 h-100 request__sender__img" src="\@Model.ProfileImg"
+                alt="\@Model.ProfileImg">
+        </div>
+    </div>
+    <div class="col-12 height-400px">
+        <div class="bg-primary height-40px d-flex justify-content-center align-items-center">
+            <h6 class="text-white font-monserrat font-size-1rem font-weight-bold">Required @Model.BloodType blood
+                type</h6>
+        </div>
+        <p class="font-size-0-5rem tex-dark font-monserrat font-weight-bold mt-2 ml-2">@Model.CreatedAt</p>
+        <p class="text-dark font-monserrat font-size-1rem ml-2">Location: @Model.DonateLocation</p>
+        <p class="text-dark font-monserrat font-size-1rem ml-2">@Model.BloodReqDesc</p>
+        <div class="w-100 d-flex justify-content-center">
+            <button class="contact__req__sender__btn" onclick="redirectToReqSender('@Model.AplicationUserId')">Contact
+                sender</button>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+<script src="~/js/bloodrequest.js"></script>
+}

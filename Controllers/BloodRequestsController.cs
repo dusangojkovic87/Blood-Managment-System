@@ -1,5 +1,6 @@
 using DonateBlood.Services.ServiceInterface;
 using Microsoft.AspNetCore.Mvc;
+using X.PagedList;
 
 namespace DonateBlood.Controllers
 {
@@ -11,10 +12,24 @@ namespace DonateBlood.Controllers
            _unitOfWork = unitOfWork;
 
         }
-        public IActionResult Index()
+        public IActionResult Index([FromQuery]int? page = null)
         {
+
+        int pageSize = 3;
+        int pageNumber = (page ?? 1);
+
         var bloodRequests = _unitOfWork.BloodRequest.getBloodRequests();
-        return View("Index",bloodRequests);
+        return View("Index",bloodRequests.ToPagedList(pageNumber,pageSize));
+        }
+
+        public IActionResult BloodRequestDetails(int Id){
+            if(!ModelState.IsValid){
+                return View("Index");
+            }
+
+        var bloodrequest = _unitOfWork.BloodRequest.getBloodRequestById(Id);
+        return View("~/Views/BloodRequests/BloodRequestDetails.cshtml",bloodrequest);
+
         }
 
     }

@@ -1,3 +1,4 @@
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace DonateBlood.Models
@@ -11,6 +12,7 @@ namespace DonateBlood.Models
         public string DonateLocation { get; set; }
         [Required(ErrorMessage = "Donate Location required"),MaxLength(500)]
         public string BloodReqDesc { get; set; }
+        public DateTime CreatedAt { get; set; }
         public int AplicationUserId { get; set; }
         public AplicationUser User { get; set; }
         [Required]
