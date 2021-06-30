@@ -904,3 +904,4 @@ C:\Users\Dule\Desktop\Donate Blood\DonateBlood\Donate Blood\obj\Debug\net5.0\Don
 C:\Users\Dule\Desktop\Donate Blood\DonateBlood\Donate Blood\obj\Debug\net5.0\ref\DonateBlood.dll
 C:\Users\Dule\Desktop\Donate Blood\DonateBlood\Donate Blood\obj\Debug\net5.0\DonateBlood.pdb
 C:\Users\Dule\Desktop\Donate Blood\DonateBlood\Donate Blood\obj\Debug\net5.0\DonateBlood.genruntimeconfig.cache
+C:\Users\Dule\Desktop\Donate Blood\DonateBlood\Donate Blood\obj\Debug\net5.0\Razor\Views\Shared\NotFound.cshtml.g.cs

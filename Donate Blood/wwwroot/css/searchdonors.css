@@ -138,6 +138,13 @@
     display: none !important;
 }
 
+.profile__img{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+}
+
+
 @media only screen and (max-width:768px){
     .donor-container{
         height:400px;
